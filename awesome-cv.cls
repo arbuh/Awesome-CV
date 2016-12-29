@@ -608,7 +608,7 @@
   \begin{center}
     \setlength\tabcolsep{0pt}
     \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{1.5cm} L{\textwidth - 4.0cm} R{2.5cm}}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{1.5cm} L{\textwidth - 6.0cm} R{4.0cm}}
 }{%
     \end{tabular*}
   \end{center}
@@ -648,6 +648,27 @@
   \end{itemize}
   \end{justify}
   \vspace{-4.0mm}
+}
+
+% Define an environment for thesis description
+\newenvironment{cvthesises}{%
+  \lettertextstyle
+}{%
+}
+% Define an entry of thesis description
+% Usage: \cvthesis{<title>}{<description>}
+\newcommand{\cvthesis}[2]{%
+  \entrytitlestyle{#1} \\ \descriptionstyle{#2}
+}
+
+% Define an environment for simple text
+\newenvironment{cvtexts}{%
+  \lettertextstyle
+}{%
+}
+% Define an entry of cv text
+\newcommand{\cvtext}[1]{%
+  \descriptionstyle{#1}
 }
 
 
